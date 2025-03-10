@@ -1,7 +1,10 @@
+import 'package:appointment_app/core/helpers/extensions.dart';
+import 'package:appointment_app/core/helpers/spacing.dart';
+import 'package:appointment_app/core/routing/route.dart';
 import 'package:appointment_app/core/theme/style.dart';
+import 'package:appointment_app/core/widget/app_text_button.dart';
 import 'package:appointment_app/feature/onboarding/widget/doc_image_and_text.dart';
 import 'package:appointment_app/feature/onboarding/widget/doc_logo_and_name.dart';
-import 'package:appointment_app/feature/onboarding/widget/get_started_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,7 +21,7 @@ class OnboardingScreen extends StatelessWidget {
           child: Column(
             children: [
               const DocLogoAndName(),
-              SizedBox(height: 30.h),
+              verticalSpace(30),
               const DocImageAndText(),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.w),
@@ -29,8 +32,15 @@ class OnboardingScreen extends StatelessWidget {
                       style: TextStyles.font13GrayRegular,
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(height: 30.h),
-                    const GetStartedButton(),
+                    verticalSpace(30),
+                    AppTextButton(
+                      buttonText: 'Get Started',
+                      onPressed: () {
+                        context.pushNamed(Routes.login);
+                      },
+                      textStyle: TextStyles.font16WhiteMedium,
+                    ),
+                    // const GetStartedButton(),
                   ],
                 ),
               )
