@@ -6,5 +6,6 @@ class AppTheme {
     useMaterial3: true,
     primaryColor: ColorManager.bluePrimary,
     scaffoldBackgroundColor: Colors.white,
+    
   );
 }
