@@ -1,8 +1,8 @@
 import 'package:appointment_app/core/networking/api_error_handler.dart';
 import 'package:appointment_app/core/networking/api_result.dart';
 import 'package:appointment_app/core/networking/api_service.dart';
-import 'package:appointment_app/feature/login/data/models/login_request_body.dart';
-import 'package:appointment_app/feature/login/data/models/login_response.dart';
+import 'package:appointment_app/feature/auth/login/data/models/login_request_body.dart';
+import 'package:appointment_app/feature/auth/login/data/models/login_response.dart';
 
 class LoginRepo {
   final ApiService _apiService;
