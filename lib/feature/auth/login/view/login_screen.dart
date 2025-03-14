@@ -1,11 +1,11 @@
 import 'package:appointment_app/core/helpers/spacing.dart';
 import 'package:appointment_app/core/theme/style.dart';
 import 'package:appointment_app/core/widget/app_text_button.dart';
-import 'package:appointment_app/feature/login/data/models/login_request_body.dart';
-import 'package:appointment_app/feature/login/logic/cubit/login_cubit.dart';
-import 'package:appointment_app/feature/login/widget/email_and_password.dart';
-import 'package:appointment_app/feature/login/widget/login_bloc_listener.dart';
-import 'package:appointment_app/feature/login/widget/terms_and_conditon.dart';
+import 'package:appointment_app/feature/auth/login/data/models/login_request_body.dart';
+import 'package:appointment_app/feature/auth/login/logic/cubit/login_cubit.dart';
+import 'package:appointment_app/feature/auth/login/widget/email_and_password.dart';
+import 'package:appointment_app/feature/auth/login/widget/login_bloc_listener.dart';
+import 'package:appointment_app/feature/auth/login/widget/terms_and_conditon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

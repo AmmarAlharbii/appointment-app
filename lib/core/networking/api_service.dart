@@ -1,6 +1,6 @@
 import 'package:appointment_app/core/networking/api_constants.dart';
-import 'package:appointment_app/feature/login/data/models/login_request_body.dart';
-import 'package:appointment_app/feature/login/data/models/login_response.dart';
+import 'package:appointment_app/feature/auth/login/data/models/login_request_body.dart';
+import 'package:appointment_app/feature/auth/login/data/models/login_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
