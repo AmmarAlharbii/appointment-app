@@ -33,6 +33,7 @@ class OnboardingScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     verticalSpace(30),
+
                     AppTextButton(
                       buttonText: 'Get Started',
                       onPressed: () {

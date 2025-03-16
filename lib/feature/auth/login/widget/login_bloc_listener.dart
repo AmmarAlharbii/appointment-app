@@ -1,6 +1,5 @@
 import 'package:appointment_app/core/helpers/extensions.dart';
 import 'package:appointment_app/core/routing/route.dart';
-import 'package:appointment_app/core/theme/colors.dart';
 import 'package:appointment_app/core/widget/error_dialog.dart';
 import 'package:appointment_app/core/widget/loading_dialog.dart';
 import 'package:appointment_app/feature/auth/login/logic/cubit/login_cubit.dart';
