@@ -11,7 +11,7 @@
             "name": "appointment_app staging",
             "request": "launch",
             "type": "dart",
-             "flutterMode": "debug",
+         //    "flutterMode": "debug",
             "program": "lib/main_development.dart",
             "args": ["--flavor", "staging", "--target", "lib/main_development.dart" ]
         },    {
@@ -26,7 +26,7 @@
             "name": "appointment_app",
             "request": "launch",
             "type": "dart",
-             "flutterMode": "release",
+        //     "flutterMode": "release",
             "program": "lib/main_production.dart",
             "args": ["--flavor", "production", "--target", "lib/main_production.dart" ]
         }
