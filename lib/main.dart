@@ -9,7 +9,6 @@ void main() async {
   await setupGetIt();
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-
   runApp(DocApp(
     appRouter: AppRouter(),
   ));
