@@ -3,6 +3,7 @@ import 'package:appointment_app/core/theme/style.dart';
 import 'package:appointment_app/core/widget/app_text_button.dart';
 import 'package:appointment_app/feature/auth/login/data/models/login_request_body.dart';
 import 'package:appointment_app/feature/auth/login/logic/cubit/login_cubit.dart';
+import 'package:appointment_app/feature/auth/login/widget/dont_have_account_text.dart';
 import 'package:appointment_app/feature/auth/login/widget/email_and_password.dart';
 import 'package:appointment_app/feature/auth/login/widget/login_bloc_listener.dart';
 import 'package:appointment_app/feature/auth/login/widget/terms_and_conditon.dart';
@@ -22,8 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
       context.read<LoginCubit>().emitLoginState(
             LoginRequestBody(
-              email: context.read<LoginCubit>().emailController.text,
-              password: context.read<LoginCubit>().passwordController.text,
+              email: context.read<LoginCubit>().email,
+              password: context.read<LoginCubit>().password,
             ),
           );
     } else {}
@@ -78,6 +79,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     verticalSpace(16),
                     const TermsAndConditionsText(),
                     const LoginBlocListener(),
+                    verticalSpace(20),
+                    const DontHaveAccountText(),
                   ],
                 )
               ],

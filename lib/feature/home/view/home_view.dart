@@ -8,6 +8,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
+        
       ),
       body: Center(
         child: Text('Home'),

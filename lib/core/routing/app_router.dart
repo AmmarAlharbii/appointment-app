@@ -1,5 +1,7 @@
 import 'package:appointment_app/core/di/dependency_injection.dart';
 import 'package:appointment_app/core/routing/route.dart';
+import 'package:appointment_app/feature/auth/signup/logic/cubit/signup_cubit.dart';
+import 'package:appointment_app/feature/auth/signup/view/signup_view.dart';
 import 'package:appointment_app/feature/home/view/home_view.dart';
 import 'package:appointment_app/feature/auth/login/logic/cubit/login_cubit.dart';
 import 'package:appointment_app/feature/auth/login/view/login_screen.dart';
@@ -18,6 +20,12 @@ class AppRouter {
             builder: (_) => BlocProvider(
                   create: (context) => getIt<LoginCubit>(),
                   child: const LoginScreen(),
+                ));
+      case Routes.signUp:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => getIt<SignupCubit>(),
+                  child: const SignUpView(),
                 ));
       case Routes.home:
         return MaterialPageRoute(
