@@ -15,8 +15,8 @@ class EmailAndPassword extends StatefulWidget {
 
 class _EmailAndPasswordState extends State<EmailAndPassword> {
   bool isObscureText = true;
-  late final TextEditingController _emailController;
-  late final TextEditingController _passwordController;
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
   bool hasLowercase = false;
   bool hasUppercase = false;
   bool hasSpecialCharacters = false;
@@ -25,8 +25,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   @override
   void initState() {
     super.initState();
-    _emailController = context.read<LoginCubit>().emailController;
-    _passwordController = context.read<LoginCubit>().passwordController;
+
     passwordListener();
   }
 
@@ -46,7 +45,6 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   @override
   void dispose() {
     super.dispose();
-    print("object");
     _emailController.dispose();
     _passwordController.dispose();
   }
@@ -66,7 +64,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
                     !AppRegex.isEmailValid(value)) {
                   return 'Please enter a valid email';
                 }
-                return null;
+                context.read<LoginCubit>().email = value;
               },
             ),
             verticalSpace(18),
@@ -77,6 +75,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
                 if (value == null || value.isEmpty) {
                   return 'Please enter a valid password';
                 }
+                context.read<LoginCubit>().password = value;
               },
               isObscureText: isObscureText,
               suffixIcon: GestureDetector(
